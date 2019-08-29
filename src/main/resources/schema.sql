@@ -1,5 +1,11 @@
 CREATE TABLE employee (
-  id INTEGER PRIMARY KEY,
-  name VARCHAR(64) NOT NULL,
-  age   int(4) NOT NULL
+  employeeId VARCHAR(64) PRIMARY KEY,
+  parkingLots VARCHAR(64) NOT NULL 
 );
+CREATE TABLE parkingLot (
+  parkingLotId VARCHAR(64) PRIMARY KEY,
+  employeeId VARCHAR(64) NOT NULL,
+  capacity VARCHAR(64) NOT NULL,
+  availablePositionCount VARCHAR(64) NOT NULL
+);
+

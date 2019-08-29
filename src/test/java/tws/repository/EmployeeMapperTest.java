@@ -39,7 +39,7 @@ public class EmployeeMapperTest {
         // given
         jdbcTemplate.execute("INSERT INTO EMPLOYEE VALUES(1,'zhangsan', 21);");
         // when
-        List<Employee> employeeList = employeeMapper.selectAll();
+        List<Employee> employeeList = employeeMapper.selectEmployeeList();
         // then
         assertEquals(1, employeeList.size());
     }

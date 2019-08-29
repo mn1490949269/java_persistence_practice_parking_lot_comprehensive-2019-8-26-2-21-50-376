@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tws.repository.EmployeeMapper">
+    <insert id="createEmployee">
+    insert into `employee`(`employeeId`,`parkingLots`)
+    values(#{employee.employeeId},#{employee.parkingLots});
+    </insert>
+    
+    <select id="selectEmployeeList" resultType="tws.entity.Employee">
+        select * from `employee`;
+    </select>
+    
+    <insert id="createParkingLot">
+    insert into `parkingLot` (`parkingLotId`,`employeeId`,`capacity`,`availablePositionCount`)
+    values(#{parkingLot.parkingLotId},#{parkingLot.employeeId},#{parkingLot.capacity},#{parkingLot.availablePositionCount});
+    </insert>
+    
+    <select id="selectParkingLotList" resultType="tws.entity.ParkingLot">
+        select * from `parkingLot`;
+    </select>
+    
+    <update id="updateParkingLotsEmployeeId" >
+        update `parkingLot` set
+        employeeId = #{parkingLot.employeeId},
+        capacity = #{parkingLot.capacity},
+        availablePositionCount = #{parkingLot.availablePositionCount}
+        where parkingLotId = #{parkingLotId};
+    </update>
+   
+    <select id="getParkingLotsByEmployeeId" resultType="tws.entity.Employee">
+        select * from `employee` where employeeId = #{employeeId} ;
+    </select>
+</mapper>
