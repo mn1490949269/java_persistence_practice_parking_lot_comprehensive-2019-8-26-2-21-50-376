@@ -1,0 +1,6 @@
+CREATE TABLE PARKING_LOT (
+  parkingLotId VARCHAR(64) PRIMARY KEY,
+  employeeId VARCHAR(64) NOT NULL,
+  capacity VARCHAR(64) NOT NULL,
+  availablePositionCount VARCHAR(64) NOT NULL
+);
