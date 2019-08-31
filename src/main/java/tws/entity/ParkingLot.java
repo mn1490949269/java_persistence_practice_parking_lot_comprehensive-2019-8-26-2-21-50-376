@@ -1,10 +1,15 @@
 package tws.entity;
 
+import javax.validation.constraints.NotNull;
 
 public class ParkingLot{
+	@NotNull(message= "ID can't be null!")
 	private String parkingLotId;
+	@NotNull(message= "employeeId can't be null!")
 	private String employeeId;
+	@NotNull(message= "capacity can't be null!")
 	private String capacity;
+	@NotNull(message= "availablePositionCount can't be null!")
 	private String availablePositionCount;
 	
 	public ParkingLot(String parkingLotId) {

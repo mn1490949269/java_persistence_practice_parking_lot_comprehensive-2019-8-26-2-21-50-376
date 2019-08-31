@@ -1,7 +1,11 @@
 package tws.entity;
 
+import javax.validation.constraints.NotNull;
 
 public class Employee{
+	
+	
+	@NotNull(message= "ID can't be null!")
     private String employeeId;
     //private String[] parkingLots; 
   
