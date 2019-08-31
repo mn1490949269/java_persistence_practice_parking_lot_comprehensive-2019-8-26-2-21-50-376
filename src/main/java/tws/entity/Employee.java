@@ -1,10 +1,9 @@
 package tws.entity;
 
-import java.io.Serializable;
 
-public class Employee  implements Serializable{
+public class Employee{
     private String employeeId;
-    private String[] parkingLots; 
+    //private String[] parkingLots; 
   
 
     public Employee() {
@@ -21,7 +20,8 @@ public class Employee  implements Serializable{
 	public void setEmployeeId(String employeeId) {
 		this.employeeId = employeeId;
 	}
-	public String[] getParkingLots() {
-		return parkingLots;
-	} 
+	 
+//	public String[] getParkingLots() {
+//		return parkingLots;
+//	} 
 }

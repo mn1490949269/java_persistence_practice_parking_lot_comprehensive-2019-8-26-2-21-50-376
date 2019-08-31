@@ -16,8 +16,8 @@ public interface EmployeeMapper {
    void createParkingLot(@Param("parkingLot") ParkingLot parkingLot);
    List<ParkingLot> selectParkingLotList();
    
-   void updateParkingLotsEmployeeId(@Param("parkingLotId") String parkingLotId, @Param("parkingLot") ParkingLot parkingLot);
-   Employee getParkingLotsByEmployeeId(@Param("employeeId") String employeeId);
+   int updateParkingLotsEmployeeId(@Param("parkingLotId") String parkingLotId, @Param("parkingLot") ParkingLot parkingLot);
+   //Employee getParkingLotsByEmployeeId(@Param("employeeId") String employeeId);
    
    
 }

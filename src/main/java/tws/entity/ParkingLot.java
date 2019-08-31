@@ -1,8 +1,7 @@
 package tws.entity;
 
-import java.io.Serializable;
 
-public class ParkingLot  implements Serializable{
+public class ParkingLot{
 	private String parkingLotId;
 	private String employeeId;
 	private String capacity;
@@ -15,6 +14,13 @@ public class ParkingLot  implements Serializable{
 	}
 	
 	
+	public ParkingLot(String parkingLotId, String employeeId, String capacity, String availablePositionCount) {
+		super();
+		this.parkingLotId = parkingLotId;
+		this.employeeId = employeeId;
+		this.capacity = capacity;
+		this.availablePositionCount = availablePositionCount;
+	}
 	public String getParkingLotId() {
 		return parkingLotId;
 	}

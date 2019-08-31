@@ -1,6 +1,5 @@
 CREATE TABLE employee (
-  employeeId VARCHAR(64) PRIMARY KEY,
-  parkingLots VARCHAR(64) NOT NULL 
+  employeeId VARCHAR(64) PRIMARY KEY
 );
 CREATE TABLE parkingLot (
   parkingLotId VARCHAR(64) PRIMARY KEY,
